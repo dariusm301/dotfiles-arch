@@ -1,0 +1,53 @@
+{
+    "layer": "bottom",
+    "position": "top",
+    "height": 36,
+    "margin-top": 8,
+    "margin-left": 12,
+    "margin-right": 12,
+    "spacing": 6,
+
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["custom/clock"],
+    "modules-right": ["network", "tray", "battery"],
+
+    "hyprland/workspaces": {
+        "format": "{id}",
+        "on-click": "activate",
+        "sort-by-number": true
+    },
+
+    "custom/clock": {
+        "exec": "LC_ALL=C date '+\uf017  %H:%M'",
+        "interval": 10,
+        "tooltip": false
+    },
+
+    "network": {
+        "interface": "wlp0s20f3",
+        "format-wifi": "\uf1eb  {signalStrength}%",
+        "format-ethernet": "\uf6ff  {ifname}",
+        "format-disconnected": "\uf127  off",
+        "format-linked": "\uf127  {ifname}",
+        "tooltip-format-wifi": "{essid}\n{ipAddr}",
+        "tooltip-format-ethernet": "{ipAddr}",
+        "on-click": "nm-connection-editor"
+    },
+
+    "tray": {
+        "spacing": 8,
+        "icon-size": 14
+    },
+
+    "battery": {
+        "format": "{icon}  {capacity}%",
+        "format-icons": ["\uf244", "\uf243", "\uf242", "\uf241", "\uf240"],
+        "format-charging": "\uf0e7  {capacity}%",
+        "format-plugged": "\uf1e6  {capacity}%",
+        "tooltip-format": "{timeTo}",
+        "states": {
+            "warning": 30,
+            "critical": 15
+        }
+    }
+}

@@ -1,0 +1,44 @@
+/* Charcoal/Slate Palette Overrides */
+@define-color theme_bg_color #0d0f11;
+@define-color theme_fg_color #eaeaea;
+@define-color theme_base_color #121417;
+@define-color theme_selected_bg_color #81a2be;
+@define-color theme_selected_fg_color #0d0f11;
+@define-color borders #282a2e;
+
+/* Ensure standard view widgets inherit proper dark backgrounds */
+textview,
+textview text,
+treeview,
+iconview {
+    background-color: #121417;
+    color: #eaeaea;
+}
+
+/* Headerbar & Toolbars */
+headerbar,
+.titlebar,
+toolbar {
+    background-color: #16181b;
+    color: #eaeaea;
+    border-bottom: 1px solid #282a2e;
+}
+
+/* Fix generic buttons inside toolbars/headerbars */
+headerbar button,
+toolbar button {
+    background-color: #22252a;
+    color: #eaeaea;
+    border: 1px solid #282a2e;
+}
+
+headerbar button:hover,
+toolbar button:hover {
+    background-color: #2d3137;
+}
+
+headerbar button:checked,
+headerbar button:active {
+    background-color: #81a2be;
+    color: #0d0f11;
+}

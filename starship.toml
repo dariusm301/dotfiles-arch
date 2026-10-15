@@ -1,0 +1,76 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[\u2591\u2592\u2593](#282a2e)\
+[ \uf303 ](bg:#282a2e fg:#eaeaea)\
+[\ue0b0](bg:#373b41 fg:#282a2e)\
+$directory\
+[\ue0b0](bg:#4f5661 fg:#373b41)\
+$git_branch\
+$git_status\
+[\ue0b0](bg:#81a2be fg:#4f5661)\
+$c\
+$rust\
+$python\
+$nodejs\
+[\ue0b0](fg:#81a2be)\
+$character"""
+
+right_format = """
+[\ue0b2](fg:#373b41)\
+$cmd_duration\
+[\ue0b2](bg:#373b41 fg:#282a2e)\
+$time\
+[\u2593\u2592\u2591](fg:#282a2e)"""
+
+add_newline = false
+
+[directory]
+style = "bg:#373b41 fg:#eaeaea"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "\u2026/"
+
+[git_branch]
+style = "bg:#4f5661 fg:#eaeaea"
+symbol = "\uf418"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:#4f5661 fg:#cc6666"
+format = '[$all_status$ahead_behind ]($style)'
+
+[c]
+style = "bg:#81a2be fg:#0d0f11"
+symbol = "\ue61e"
+format = '[ $symbol ($version) ]($style)'
+
+[rust]
+style = "bg:#81a2be fg:#0d0f11"
+symbol = "\ue7a8"
+format = '[ $symbol ($version) ]($style)'
+
+[python]
+style = "bg:#81a2be fg:#0d0f11"
+symbol = "\ue235"
+format = '[ $symbol ($version) ]($style)'
+
+[nodejs]
+style = "bg:#81a2be fg:#0d0f11"
+symbol = "\ue718"
+format = '[ $symbol ($version) ]($style)'
+
+[cmd_duration]
+style = "bg:#373b41 fg:#eaeaea"
+format = '[ \uf252 $duration ]($style)'
+min_time = 2_000
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:#282a2e fg:#969896"
+format = '[ $time ]($style)'
+
+[character]
+success_symbol = "[\u276f](bold #81a2be)"
+error_symbol = "[\u276f](bold #cc6666)"

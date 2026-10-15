@@ -1,0 +1,118 @@
+* {
+    font-family: JetBrainsMono Nerd Font, monospace;
+    font-size: 13px;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+/* ── pill base ── */
+#workspaces,
+#custom-clock,
+#network,
+#tray,
+#battery {
+    background: rgba(8, 8, 12, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    margin: 0 3px;
+    color: rgba(200, 200, 220, 0.75);
+}
+
+/* ── workspaces ── */
+#workspaces {
+    padding: 0 4px;
+}
+
+#workspaces button {
+    padding: 4px 11px;
+    color: rgba(255, 255, 255, 0.22);
+    background: transparent;
+    border-radius: 8px;
+    transition: all 0.15s ease;
+    margin: 0 1px;
+}
+
+#workspaces button.active {
+    color: #c8d0e8;
+    background: rgba(180, 190, 255, 0.10);
+}
+
+#workspaces button.urgent {
+    color: #bf616a;
+}
+
+#workspaces button:hover {
+    color: rgba(255, 255, 255, 0.60);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: none;
+}
+
+/* ── clock ── */
+#custom-clock {
+    color: #e0e4f0;
+    padding: 0 18px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* ── right group: network + tray + battery in one box ── */
+#network,
+#tray,
+#battery {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+}
+
+.modules-right {
+    background: rgba(8, 8, 12, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    margin: 0 3px;
+}
+
+#network {
+    padding: 0 12px;
+    color: #8ab4d4;
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+#network.disconnected {
+    color: rgba(191, 97, 106, 0.80);
+}
+
+#tray {
+    padding: 0 10px;
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+#battery {
+    padding: 0 12px;
+    color: #a3be8c;
+}
+
+#battery.warning:not(.charging) {
+    color: #ebcb8b;
+}
+
+#battery.critical:not(.charging) {
+    color: #bf616a;
+    animation: blink 1.2s ease infinite;
+}
+
+#battery.charging {
+    color: #88c0d0;
+}
+
+@keyframes blink {
+    from { opacity: 1; }
+    to   { opacity: 0.35; }
+}
