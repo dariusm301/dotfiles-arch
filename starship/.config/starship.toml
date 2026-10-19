@@ -28,8 +28,9 @@ add_newline = false
 [directory]
 style = "bg:#373b41 fg:#eaeaea"
 format = "[ $path ]($style)"
-truncation_length = 3
-truncation_symbol = "\u2026/"
+truncation_length = 1
+truncation_symbol = ""
+truncate_to_repo = false
 
 [git_branch]
 style = "bg:#4f5661 fg:#eaeaea"
@@ -53,7 +54,7 @@ format = '[ $symbol ($version) ]($style)'
 [python]
 style = "bg:#81a2be fg:#0d0f11"
 symbol = "\ue235"
-format = '[ $symbol ($version) ]($style)'
+format = '[ $symbol ($version)(\$virtualenv\) ]($style)'
 
 [nodejs]
 style = "bg:#81a2be fg:#0d0f11"
