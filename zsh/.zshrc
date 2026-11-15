@@ -12,3 +12,6 @@ alias ls='eza --icons --group-directories-first'
 alias ll='eza -l --header --git --icons --group-directories-first'
 alias la='eza -la --header --git --icons --group-directories-first'
 alias lt='eza --tree --level=2 --icons'
+
+bindkey '^[[1;5D' backward-word
+bindkey '^[[1;5C' forward-word

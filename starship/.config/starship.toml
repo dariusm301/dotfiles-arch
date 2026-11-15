@@ -54,7 +54,7 @@ format = '[ $symbol ($version) ]($style)'
 [python]
 style = "bg:#81a2be fg:#0d0f11"
 symbol = "\ue235"
-format = '[ $symbol ($version)(\$virtualenv\) ]($style)'
+format = '[$symbol($version )(\($virtualenv\) )]($style)'
 
 [nodejs]
 style = "bg:#81a2be fg:#0d0f11"
@@ -63,7 +63,7 @@ format = '[ $symbol ($version) ]($style)'
 
 [cmd_duration]
 style = "bg:#373b41 fg:#eaeaea"
-format = '[ \uf252 $duration ]($style)'
+format = "[ \uf252 $duration ]($style)"
 min_time = 2_000
 
 [time]

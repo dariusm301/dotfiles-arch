@@ -9,7 +9,7 @@
 
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["custom/clock"],
-    "modules-right": ["network", "tray", "battery"],
+    "modules-right": ["network", "tray", "pulseaudio", "battery"],
 
     "hyprland/workspaces": {
         "format": "{id}",
@@ -29,8 +29,8 @@
         "format-ethernet": "\uf6ff  {ifname}",
         "format-disconnected": "\uf127  off",
         "format-linked": "\uf127  {ifname}",
-        "tooltip-format-wifi": "{essid}\n{ipAddr}",
-        "tooltip-format-ethernet": "{ipAddr}",
+        "tooltip-format-wifi": "{essid}\n{ipaddr}",
+        "tooltip-format-ethernet": "{ipaddr}",
         "on-click": "nm-connection-editor"
     },
 
@@ -38,6 +38,17 @@
         "spacing": 8,
         "icon-size": 14
     },
+    "pulseaudio": {
+	    "format": "{icon} {volume}%",
+	    "format-muted": "\uf026 muted",
+	    "format-icons": {
+		"default": ["\uf026", "\uf027", "\uf028"]
+	    },
+	    "scroll-step": 5,
+	    "on-click": "pavucontrol",
+	    "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+	    "tooltip-format": "{desc}"
+},
 
     "battery": {
         "format": "{icon}  {capacity}%",
