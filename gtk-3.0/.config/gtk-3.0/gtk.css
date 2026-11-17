@@ -1,44 +1,119 @@
-/* Charcoal/Slate Palette Overrides */
-@define-color theme_bg_color #0d0f11;
-@define-color theme_fg_color #eaeaea;
-@define-color theme_base_color #121417;
-@define-color theme_selected_bg_color #81a2be;
-@define-color theme_selected_fg_color #0d0f11;
-@define-color borders #282a2e;
-
-/* Ensure standard view widgets inherit proper dark backgrounds */
-textview,
-textview text,
-treeview,
-iconview {
-    background-color: #121417;
-    color: #eaeaea;
+/* Thunar Custom Glass & Steel-Slate Theme */
+window.thunar,
+window.thunar paned,
+window.thunar stack {
+    background-color: rgba(13, 15, 17, 0.60);
+    color: #d8dee9;
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 9pt;
 }
 
-/* Headerbar & Toolbars */
-headerbar,
-.titlebar,
-toolbar {
-    background-color: #16181b;
-    color: #eaeaea;
-    border-bottom: 1px solid #282a2e;
+/* Headerbar & Toolbar */
+window.thunar headerbar,
+window.thunar toolbar,
+window.thunar menubar {
+    background-color: rgba(13, 15, 17, 0.72);
+    background-image: none;
+    border-bottom: 1px solid rgba(56, 178, 172, 0.35);
+    color: #eceff4;
+    min-height: 28px;
+    padding: 2px 6px;
 }
 
-/* Fix generic buttons inside toolbars/headerbars */
-headerbar button,
-toolbar button {
-    background-color: #22252a;
-    color: #eaeaea;
-    border: 1px solid #282a2e;
+/* Pathbar / Location Entry */
+window.thunar entry,
+window.thunar .path-bar button {
+    background-color: rgba(35, 42, 50, 0.65);
+    background-image: none;
+    color: #eceff4;
+    border: 1px solid rgba(129, 162, 190, 0.25);
+    border-radius: 8px;
+    min-height: 22px;
+    padding: 2px 8px;
 }
 
-headerbar button:hover,
-toolbar button:hover {
-    background-color: #2d3137;
+window.thunar entry:focus {
+    border-color: #38b2ac;
+    box-shadow: none;
 }
 
-headerbar button:checked,
-headerbar button:active {
-    background-color: #81a2be;
-    color: #0d0f11;
+/* Left Sidebar (Places / Tree) */
+window.thunar .sidebar,
+window.thunar .sidebar view,
+window.thunar .sidebar row {
+    background-color: rgba(13, 15, 17, 0.45);
+    color: #d8dee9;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+window.thunar .sidebar row:selected {
+    background-color: rgba(35, 42, 50, 0.75);
+    color: #81a2be;
+    border-left: 2px solid #38b2ac;
+}
+
+/* Main File View (Icon & Details List) */
+window.thunar .view,
+window.thunar treeview.view,
+window.thunar iconview.view {
+    background-color: rgba(13, 15, 17, 0.50);
+    color: #d8dee9;
+}
+
+window.thunar .view:selected,
+window.thunar treeview.view:selected,
+window.thunar iconview.view:selected {
+    background-color: rgba(35, 42, 50, 0.75);
+    color: #eceff4;
+    outline: 1px solid rgba(129, 162, 190, 0.5);
+    border-radius: 6px;
+}
+
+/* Treeview Column Headers */
+window.thunar treeview.view header button {
+    background-color: rgba(13, 15, 17, 0.75);
+    background-image: none;
+    color: #81a2be;
+    border: none;
+    border-bottom: 1px solid rgba(129, 162, 190, 0.2);
+    padding: 3px 6px;
+}
+
+/* Statusbar */
+window.thunar statusbar {
+    background-color: rgba(13, 15, 17, 0.72);
+    color: #81a2be;
+    border-top: 1px solid rgba(129, 162, 190, 0.15);
+    padding: 1px 6px;
+    font-size: 8.5pt;
+}
+
+/* Context Menus */
+window.thunar menu,
+.thunar menu {
+    background-color: rgba(13, 15, 17, 0.90);
+    border: 1px solid #38b2ac;
+    border-radius: 10px;
+    padding: 4px;
+    color: #d8dee9;
+}
+
+window.thunar menuitem:hover,
+.thunar menuitem:hover {
+    background-color: rgba(35, 42, 50, 0.85);
+    color: #81a2be;
+    border-radius: 6px;
+}
+
+/* Slim Scrollbars */
+window.thunar scrollbar slider {
+    background-color: rgba(129, 162, 190, 0.35);
+    border-radius: 99px;
+    min-width: 5px;
+    min-height: 5px;
+}
+
+window.thunar scrollbar slider:hover {
+    background-color: #38b2ac;
 }

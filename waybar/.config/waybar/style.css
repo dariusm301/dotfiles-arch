@@ -14,7 +14,7 @@ window#waybar {
 
 /* ── pill base ── */
 #workspaces,
-#custom-clock,
+#clock,
 #network,
 #tray,
 #battery {
@@ -55,7 +55,7 @@ window#waybar {
 }
 
 /* ── clock ── */
-#custom-clock {
+#clock {
     color: #e0e4f0;
     padding: 0 18px;
     font-size: 14px;

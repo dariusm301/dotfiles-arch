@@ -15,3 +15,5 @@ alias lt='eza --tree --level=2 --icons'
 
 bindkey '^[[1;5D' backward-word
 bindkey '^[[1;5C' forward-word
+
+export PATH="$HOME/.local/bin:$PATH"

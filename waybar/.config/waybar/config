@@ -8,7 +8,7 @@
     "spacing": 6,
 
     "modules-left": ["hyprland/workspaces"],
-    "modules-center": ["custom/clock"],
+    "modules-center": ["clock"],
     "modules-right": ["network", "tray", "pulseaudio", "battery"],
 
     "hyprland/workspaces": {
@@ -17,12 +17,12 @@
         "sort-by-number": true
     },
 
-    "custom/clock": {
-        "exec": "LC_ALL=C date '+\uf017  %H:%M'",
-        "interval": 10,
-        "tooltip": false
-    },
-
+    "clock": {
+	    "format": "\uf017  {:%H:%M}",
+	    "format-alt": "\uf073  {:%a, %d %b %Y}",
+	    "locale": "C",
+	    "tooltip-format": "<tt>{calendar}</tt>"
+	},
     "network": {
         "interface": "wlp0s20f3",
         "format-wifi": "\uf1eb  {signalStrength}%",
